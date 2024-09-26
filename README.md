@@ -32,7 +32,8 @@ pip install -e .
 ```
 
 ```bash
-export OPENAI_API_KEY="your-openai-api-key"
+export OPENAI_API_KEY="your-openai-api-key" or export GOOGLE_API_KEY="your-google-api-key"
+
 wandb login
 ```
 
