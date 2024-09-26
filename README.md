@@ -145,6 +145,32 @@ print(f"Accuracy: {accuracy:.2f}")
 }
 ```
 
+### **Plotting Compared Metrics**
+
+
+```python
+from logllm.log_llm import log_llm
+from logllm.plot import plot_metrics
+from logllm.plot_v1 import plot_ml_metrics
+
+# code_string = extract_notebook_code(notebook_path)
+notebook_path = "svc-sample.ipynb" 
+notebook_pat = "train.ipynb"
+notebook_pa = "cal.ipynb"
+
+# Extract experimental conditions and results using log_llm
+code_string = log_llm(notebook_path, provider="gemini")
+code_strin = log_llm(notebook_pat, provider="gemini")
+code_str = log_llm(notebook_pa, provider="gemini")
+
+
+# Plot the response from the query
+plot_metrics(code_string, code_strin, code_str)
+```
+
+![Untitled](https://github.com/user-attachments/assets/364637fc-c7ac-41ce-aa69-862f8d9b3a13)
+
+
 [📄 **Check the Demo Code**](https://github.com/shure-dev/logllm/blob/main/demos/svc-sample.ipynb)
 
 ---
